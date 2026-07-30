@@ -1,0 +1,4 @@
+# В Google Business Profile ссылка вида fixbox.site/ubud — держим этот путь рабочим,
+# чтобы при переезде на свой домен ничего не переписывать.
+/ubud     /ubud.html   200
+/canggu   /index.html  200

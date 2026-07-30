@@ -1,0 +1,22 @@
+# Cloudflare Pages: заголовки для статики.
+# HTML не кешируем — правки текста и NAP должны приезжать сразу.
+# Ассеты кешируем надолго: имена файлов включают ширину, менять их вручную.
+
+/*.html
+  Cache-Control: public, max-age=0, must-revalidate
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+
+/
+  Cache-Control: public, max-age=0, must-revalidate
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/styles.css
+  Cache-Control: public, max-age=86400
+
+/theme.js
+  Cache-Control: public, max-age=86400
