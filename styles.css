@@ -406,6 +406,21 @@ p {
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 17rem), 1fr));
 }
 
+/* Услуг восемь, и в один столбец на мобиле это простыня. Здесь — две колонки
+   с компактными карточками; описание остаётся в HTML (его читает Google),
+   но прячется на узких экранах, где оно только удлиняет прокрутку. */
+.grid--services {
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.6rem;
+}
+
+@media (min-width: 620px) {
+  .grid--services {
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 17rem), 1fr));
+    gap: clamp(0.9rem, 2vw, 1.35rem);
+  }
+}
+
 .card {
   background: var(--bg-elevated);
   border: 1px solid var(--border);
@@ -416,6 +431,18 @@ p {
   gap: 0.6rem;
 }
 
+.grid--services .card {
+  padding: 1rem 0.9rem 1.1rem;
+  gap: 0.4rem;
+}
+
+@media (min-width: 620px) {
+  .grid--services .card {
+    padding: clamp(1.35rem, 3vw, 1.75rem);
+    gap: 0.6rem;
+  }
+}
+
 .card__icon {
   width: 34px;
   height: 34px;
@@ -423,9 +450,46 @@ p {
   margin-bottom: 0.35rem;
 }
 
+.grid--services .card__icon {
+  width: 26px;
+  height: 26px;
+  margin-bottom: 0.15rem;
+}
+
+@media (min-width: 620px) {
+  .grid--services .card__icon {
+    width: 34px;
+    height: 34px;
+    margin-bottom: 0.35rem;
+  }
+}
+
+.grid--services .card h3 {
+  font-size: 0.95rem;
+  line-height: 1.25;
+}
+
+@media (min-width: 620px) {
+  .grid--services .card h3 {
+    font-size: clamp(1.05rem, 1rem + 0.3vw, 1.2rem);
+    line-height: 1.15;
+  }
+}
+
 .card p {
   color: var(--fg-muted);
   font-size: 0.96rem;
+}
+
+/* Описание услуги — только для широких экранов и для поисковых роботов. */
+.grid--services .card__desc {
+  display: none;
+}
+
+@media (min-width: 620px) {
+  .grid--services .card__desc {
+    display: block;
+  }
 }
 
 .card__time {
@@ -435,6 +499,18 @@ p {
   font-weight: 600;
   color: var(--fg-muted);
   letter-spacing: 0.02em;
+}
+
+.grid--services .card__time {
+  padding-top: 0.5rem;
+  font-size: 0.78rem;
+}
+
+@media (min-width: 620px) {
+  .grid--services .card__time {
+    padding-top: 0.9rem;
+    font-size: 0.85rem;
+  }
 }
 
 /* ---------- Блок «почему мы» с картинкой ---------- */
