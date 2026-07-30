@@ -613,9 +613,9 @@ p {
   object-position: 50% 30%;
 }
 
-/* Вертикальный кадр фасада: смещаем ниже, чтобы в кадр попал вход, а не небо. */
-.step__media--building img {
-  object-position: 50% 62%;
+/* Широкий кадр интерьера: режется по бокам, держим правую часть со стойкой. */
+.step__media--interior img {
+  object-position: 70% 50%;
 }
 
 
@@ -639,6 +639,32 @@ p {
 .step p {
   color: var(--fg-muted);
   font-size: 0.96rem;
+}
+
+/* На Бали ориентируются по карте, а не по адресу — даём ткнуть прямо из шага. */
+.step__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-top: 0.15rem;
+  font-size: 0.92rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--fg);
+  border-bottom: 1px solid var(--border-strong);
+  padding-bottom: 0.15rem;
+  align-self: flex-start;
+  transition: border-color 0.15s;
+}
+
+.step__link:hover {
+  border-color: var(--fg);
+}
+
+.step__link svg {
+  width: 16px;
+  height: 16px;
+  flex: none;
 }
 
 /* ---------- Отзывы ---------- */
