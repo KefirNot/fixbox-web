@@ -599,9 +599,12 @@ p {
   object-position: 50% 30%;
 }
 
+/* line-height: 1 обязателен: иначе бокс строки выше глифа и цифра визуально
+   съезжает вниз от центра кружка. */
 .step__num {
-  display: inline-grid;
-  place-items: center;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   width: 30px;
   height: 30px;
   border-radius: 50%;
@@ -609,6 +612,7 @@ p {
   color: var(--bg);
   font-size: 0.86rem;
   font-weight: 700;
+  line-height: 1;
   margin-top: 0.35rem;
 }
 
