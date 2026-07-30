@@ -1,4 +1,4 @@
-# В Google Business Profile ссылка вида fixbox.site/ubud — держим этот путь рабочим,
-# чтобы при переезде на свой домен ничего не переписывать.
-/ubud     /ubud.html   200
-/canggu   /index.html  200
+# Cloudflare Pages сам отдаёт ubud.html по адресу /ubud и редиректит .html на чистый
+# URL — правило "/ubud /ubud.html" здесь создало бы петлю редиректов, поэтому его нет.
+# Нужен только алиас /canggu, потому что главная лежит в index.html.
+/canggu   /   301
