@@ -375,9 +375,23 @@ p {
   background: var(--bg-soft);
 }
 
+/* Кадр с фасадом вертикальный, и вывеска в нём вверху: широкий кроп её срезает.
+   Даём высокую пропорцию и тянем кадр к верхнему краю. */
+.hero__media--building {
+  aspect-ratio: 5 / 6;
+}
+
+.hero__media--building img {
+  object-position: 50% 20%;
+}
+
 @media (min-width: 900px) {
   .hero__media {
     aspect-ratio: 4 / 5;
+  }
+
+  .hero__media--building img {
+    object-position: 50% 35%;
   }
 }
 
