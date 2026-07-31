@@ -163,6 +163,22 @@ p {
   border-bottom: 1px solid var(--border);
 }
 
+/* Подложка над шапкой. На iOS Safari при сворачивании адресной строки
+   над sticky-шапкой открывается полоса, сквозь которую просвечивает hero.
+   Псевдоэлемент закрашивает её непрозрачным --bg (цвет, к которому шапка
+   сводится у верха страницы), поэтому полоса выглядит продолжением шапки.
+   На десктопе и Android он уходит выше края экрана и ни на что не влияет. */
+.header::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 100%;
+  height: 100vh;
+  background: var(--bg);
+  pointer-events: none;
+}
+
 .header__inner {
   display: flex;
   align-items: center;
