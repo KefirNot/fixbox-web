@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://fixbox.pages.dev/sitemap.xml
+Sitemap: https://fixbox.id/sitemap.xml
