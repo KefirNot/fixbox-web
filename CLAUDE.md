@@ -110,11 +110,15 @@ https://maps.app.goo.gl/hjouSze7XNG3z4mPA
 4. **Услуги в GBP не заполнены** — стоит добавить их в профилях, это отдельный
    фактор ранжирования.
 5. Промо-ролик существует, но в репозиторий не добавлен.
+6. **Соцсети в GBP не прописаны.** На сайте в `sameAs` (JSON-LD обеих страниц)
+   стоят Instagram `fixbox_bali` и TikTok `@fixbox_bali` — те же ссылки надо
+   добавить в Social profiles обоих профилей GBP, чтобы связка
+   сайт ↔ соцсети ↔ GBP стала трёхсторонней.
 
 ## Состояние
 
 Обе страницы свёрстаны и проверены: Lighthouse mobile — Accessibility, Best
 Practices, SEO, Agentic Browsing по 100. Сайт задеплоен и живёт на
 `https://fixbox.id` (GitHub Pages, автодеплой при пуше в `main`); HTTP и `www`
-редиректят на апекс с HTTPS. Осталось: смена ссылок в GBP и Search Console
-(вопросы 1–2).
+редиректят на апекс с HTTPS. Осталось на стороне GBP: смена ссылок, Search
+Console, соцсети (вопросы 1–2, 6).
